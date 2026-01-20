@@ -7,13 +7,32 @@
     <title>Центр «РЕЗОН 152» - Профессиональная покраска дисков в Нижнем Новгороде</title>
     <meta name="description" content="Порошковая покраска и ремонт автомобильных дисков. Гарантия качества, доступные цены, работаем с 2018 года. Нижний Новгород, ул. Деловая, 2Д">
     <meta name="keywords" content="покраска дисков, порошковая покраска, ремонт дисков, Нижний Новгород, покраска дисков цена, литые диски">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Основные CSS файлы -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/advantages.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/prices.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/process.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    
+    <!-- Иконочные шрифты и Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-     <!-- Критический CSS (инлайн) -->
+    <!-- Критический CSS (инлайн) -->
     <style>
         /* Критический CSS для быстрой отрисовки */
         .loading {
@@ -63,19 +82,18 @@
     </style>
     
     <!-- Предзагрузка критических ресурсов -->
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="css/base.css" as="style">
+    <link rel="preload" href="css/header.css" as="style">
+    <link rel="preload" href="css/hero.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" as="style" crossorigin>
     <link rel="preload" href="./image/4.jpg" as="image">
     
     <!-- Предзагрузка шрифтов -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Ленивая загрузка не критичных стилей -->
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    
     <!-- Noscript fallback -->
     <noscript>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
 </head>
@@ -136,18 +154,18 @@
         </div>
     </header>
 
-    <!-- В навигации добавьте ссылку на политику -->
+    <!-- Навигация -->
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> <span>Главная</span></a></li>
-                <li><a href="index.html#advantages" class="nav-link"><i class="fas fa-star"></i> <span>Преимущества</span></a></li>
-                <li><a href="index.html#services" class="nav-link"><i class="fas fa-cogs"></i> <span>Услуги</span></a></li>
-                <li><a href="index.html#prices" class="nav-link"><i class="fas fa-tags"></i> <span>Цены</span></a></li>
-                <li><a href="index.html#gallery" class="nav-link"><i class="fas fa-images"></i> <span>Галерея</span></a></li>
-                <li><a href="index.html#process" class="nav-link"><i class="fas fa-tasks"></i> <span>Процесс</span></a></li>
-                <li><a href="index.html#faq" class="nav-link"><i class="fas fa-question-circle"></i> <span>FAQ</span></a></li>
-                <li><a href="index.html#contacts" class="nav-link"><i class="fas fa-map-marker-alt"></i> <span>Контакты</span></a></li>
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Главная</span></a></li>
+                <li><a href="#advantages" class="nav-link"><i class="fas fa-star"></i> <span>Преимущества</span></a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-cogs"></i> <span>Услуги</span></a></li>
+                <li><a href="#prices" class="nav-link"><i class="fas fa-tags"></i> <span>Цены</span></a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> <span>Галерея</span></a></li>
+                <li><a href="#process" class="nav-link"><i class="fas fa-tasks"></i> <span>Процесс</span></a></li>
+                <li><a href="#faq" class="nav-link"><i class="fas fa-question-circle"></i> <span>FAQ</span></a></li>
+                <li><a href="#contacts" class="nav-link"><i class="fas fa-map-marker-alt"></i> <span>Контакты</span></a></li>
             </ul>
         </div>
     </nav>
@@ -244,7 +262,6 @@
         </div>
     </section>
 
-    <!-- Услуги -->
     <!-- Услуги -->
     <section id="services" class="services-section section-padding">
         <div class="container">
@@ -683,11 +700,10 @@
                 <div class="footer-links">
                     <h4>Информация</h4>
                     <ul>
-                        <li><a href="index.html#prices">Цены</a></li>
-                        <li><a href="index.html#process">Процесс работы</a></li>
-                        <li><a href="index.html#faq">Вопросы и ответы</a></li>
-                        <li><a href="index.html#gallery">Наши работы</a></li>
-                        <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+                        <li><a href="#prices">Цены</a></li>
+                        <li><a href="#process">Процесс работы</a></li>
+                        <li><a href="#faq">Вопросы и ответы</a></li>
+                        <li><a href="#gallery">Наши работы</a></li>
                     </ul>
                 </div>
                 
@@ -711,6 +727,14 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script src="script.js"></script>
+    <!-- JavaScript файлы (ПОРЯДОК ВАЖЕН!) -->
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

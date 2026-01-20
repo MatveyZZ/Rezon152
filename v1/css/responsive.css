@@ -1,0 +1,517 @@
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 2.75rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        margin: 40px auto;
+    }
+    
+    .service-detail {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .service-info h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .service-list li {
+        justify-content: center;
+    }
+    
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .gallery-item.large {
+        grid-column: span 1;
+        height: 350px;
+    }
+    
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.25rem;
+    }
+    
+    .btn-cta {
+        min-width: 200px;
+        padding: 20px 35px;
+    }
+    
+    .tab-buttons {
+        top: 170px;
+    }
+    
+    .tab-button {
+        padding: 18px 10px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+        order: 3;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--gradient-secondary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 0 40px;
+        transition: var(--transition);
+        z-index: 1000;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-list.active {
+        right: 0;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 20px 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1.125rem;
+    }
+    
+    .nav-link::before {
+        display: none;
+    }
+    
+    .nav-link.active {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link i {
+        font-size: 1.25rem;
+        width: 24px;
+    }
+    
+    .main-nav {
+        position: static;
+        display: none;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        margin: 40px auto;
+        gap: 15px;
+    }
+    
+    .stat {
+        padding: 18px 12px;
+        min-height: 90px;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .price-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+    
+    .price-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn-cta {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .btn-call .call-text {
+        display: none;
+    }
+    
+    .contact-phone {
+        display: none;
+    }
+    
+    .tab-buttons {
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+        margin: 0;
+        border-radius: var(--border-radius);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .tab-buttons::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .tab-button {
+        flex: 0 0 auto;
+        padding: 15px 25px;
+        margin: 0 5px;
+        font-size: 0.95rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .tab-content {
+        padding: 25px;
+    }
+    
+    .process-timeline::before {
+        left: 40px;
+    }
+    
+    .process-step {
+        margin-bottom: 30px;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        margin-right: 25px;
+        font-size: 1.5rem;
+    }
+    
+    .step-content {
+        padding: 25px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links a {
+        justify-content: center;
+    }
+    
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .btn,
+    .tab-button,
+    .nav-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 80px 0 50px;
+    }
+    
+    .hero-title {
+        font-size: 1.875rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        gap: 12px;
+    }
+    
+    .stat {
+        padding: 20px 15px;
+        min-height: 95px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-text {
+        font-size: 0.85rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item.large {
+        height: 250px;
+    }
+    
+    .image-badge {
+        top: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 0.75rem;
+    }
+    
+    .advantages-section,
+    .services-section,
+    .prices-section,
+    .gallery-section,
+    .process-section,
+    .faq-section,
+    .contacts-section,
+    .cta-section {
+        padding: 80px 0;
+    }
+    
+    .process-timeline::before {
+        left: 30px;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        font-size: 1.25rem;
+    }
+    
+    .step-content {
+        padding: 20px;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.125rem;
+    }
+    
+    .btn {
+        padding: 14px 25px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-large {
+        padding: 16px 30px;
+    }
+    
+    .phone-number {
+        font-size: 1.125rem;
+    }
+    
+    .top-bar {
+        font-size: 0.75rem;
+        padding: 10px 0;
+    }
+    
+    .tab-buttons {
+        padding: 8px;
+    }
+    
+    .tab-button {
+        padding: 12px 15px;
+        font-size: 0.875rem;
+        min-width: 140px;
+    }
+    
+    .tab-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.625rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .btn-cta span {
+        font-size: 0.875rem;
+    }
+    
+    .price-new {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Для тач-устройств */
+@media (hover: none) and (pointer: coarse) {
+    .advantage-card:hover,
+    .price-card:hover,
+    .contact-card:hover,
+    .social-icon:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .hero-buttons .btn:hover,
+    .cta-buttons .btn:hover {
+        transform: scale(1.02);
+    }
+    
+    .nav-link:hover,
+    .tab-button:hover {
+        background: rgba(255, 90, 95, 0.1);
+    }
+    
+    .scroll-top:hover {
+        transform: none;
+    }
+}
+
+/* Фикс для iOS */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        padding: 100px 0 60px;
+        min-height: -webkit-fill-available;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    /* Фикс для 100vh на мобильных */
+    .hero,
+    .cta-section {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Фикс для сафари backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .header {
+        background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .tab-buttons {
+        background: rgba(248, 249, 255, 0.98);
+    }
+}
+
+/* Минификация критических стилей */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Оптимизация для медленных соединений */
+@media (prefers-reduced-data: reduce) {
+    .hero-background,
+    .services-tabs::before,
+    .advantage-icon::before,
+    .social-link::before {
+        display: none !important;
+    }
+    
+    .gallery-overlay {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Отключение анимаций для пользователей с настройками */
+@media (prefers-reduced-motion) {
+    .animate-on-scroll,
+    .stat,
+    .advantage-card,
+    .price-card,
+    .gallery-item {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}

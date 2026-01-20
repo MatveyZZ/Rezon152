@@ -1,0 +1,178 @@
+/* Вспомогательные классы */
+.hide-on-mobile {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* Загрузка */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Кнопка "Наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transform: translateY(20px);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(255, 90, 95, 0.4);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    color: var(--primary);
+}
+
+/* Альтернативный вариант для статистики */
+.stat-expanded {
+    padding: 25px 20px !important;
+    min-height: 110px !important;
+}
+
+.stat-expanded .stat-number {
+    font-size: 2.8rem !important;
+}
+
+/* Если нужно просто увеличить все статы */
+@media (min-width: 769px) {
+    .hero-stats {
+        gap: 25px;
+    }
+    
+    .stat {
+        padding: 25px 20px;
+        min-height: 110px;
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .stat-text {
+        font-size: 0.95rem;
+        min-height: 36px;
+    }
+}
+
+/* Исправление для длинных цифр (1000+) */
+.stat:nth-child(2) .stat-number {
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+}
+
+@media (min-width: 769px) {
+    .stat:nth-child(2) .stat-number {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat {
+        padding: 18px 12px;
+        min-height: 85px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}

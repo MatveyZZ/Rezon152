@@ -25,6 +25,8 @@ function initNavigation() {
     const header = document.querySelector('.header');
     const mainNav = document.querySelector('.main-nav');
 
+    if (!mobileMenuBtn || !navList) return;
+
     // Функция переключения мобильного меню
     function toggleMobileMenu() {
         navList.classList.toggle('active');

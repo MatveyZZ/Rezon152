@@ -1,0 +1,34 @@
+/* Общие классы для layout */
+.section-padding {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Анимация появления элементов */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.will-change {
+    will-change: transform, opacity;
+}
+
+/* Предотвращение скачков контента */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,219 @@
+/* Футер */
+.footer {
+    background: var(--secondary);
+    color: white;
+    padding: 70px 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-light), 
+        transparent);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-logo h3 .highlight {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-logo p {
+    color: #adb5bd;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.footer-social a:hover::before {
+    left: 100%;
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 90, 95, 0.3);
+}
+
+.footer-links h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-primary);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(8px);
+}
+
+.footer-links a::before {
+    content: '›';
+    color: var(--primary);
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover::before {
+    transform: translateX(5px);
+}
+
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-contact h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-primary);
+}
+
+.footer-contact p {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #adb5bd;
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+}
+
+.footer-contact p:hover {
+    color: white;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #495057;
+    padding-top: 30px;
+    text-align: center;
+    color: #adb5bd;
+    font-size: 0.875rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+}
+
+.footer-bottom a {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+    color: white;
+    text-decoration: underline;
+}
